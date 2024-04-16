@@ -2002,6 +2002,104 @@ esp32s3box.menu.EraseFlash.all.upload.erase_cmd=-e
 
 ##############################################################
 
+esp32s3box_lite.name=ESP32-S3-Box Lite
+esp32s3box_lite.vid.0=0x303a
+esp32s3box_lite.pid.0=0x1001
+
+esp32s3box_lite.bootloader.tool=esptool_py
+esp32s3box_lite.bootloader.tool.default=esptool_py
+
+esp32s3box_lite.upload.tool=esptool_py
+esp32s3box_lite.upload.tool.default=esptool_py
+esp32s3box_lite.upload.tool.network=esp_ota
+
+esp32s3box_lite.upload.maximum_size=3145728
+esp32s3box_lite.upload.maximum_data_size=327680
+esp32s3box_lite.upload.speed=921600
+esp32s3box_lite.upload.flags=
+esp32s3box_lite.upload.extra_flags=
+esp32s3box_lite.upload.use_1200bps_touch=false
+esp32s3box_lite.upload.wait_for_upload_port=false
+
+esp32s3box_lite.serial.disableDTR=false
+esp32s3box_lite.serial.disableRTS=false
+
+esp32s3box_lite.build.tarch=xtensa
+esp32s3box_lite.build.bootloader_addr=0x0
+esp32s3box_lite.build.target=esp32s3
+esp32s3box_lite.build.mcu=esp32s3
+esp32s3box_lite.build.core=esp32
+esp32s3box_lite.build.variant=esp32s3box_lite
+esp32s3box_lite.build.board=ESP32_S3_BOX_Liter
+
+esp32s3box_lite.build.usb_mode=1
+esp32s3box_lite.build.cdc_on_boot=1
+esp32s3box_lite.build.msc_on_boot=0
+esp32s3box_lite.build.dfu_on_boot=0
+esp32s3box_lite.build.f_cpu=240000000L
+esp32s3box_lite.build.flash_size=16MB
+esp32s3box_lite.build.flash_freq=80m
+esp32s3box_lite.build.flash_mode=dio
+esp32s3box_lite.build.boot=qio
+esp32s3box_lite.build.partitions=default
+esp32s3box_lite.build.defines=-DBOARD_HAS_PSRAM
+esp32s3box_lite.build.memory_type=qio_opi
+esp32s3box_lite.build.loop_core=-DARDUINO_RUNNING_CORE=1
+esp32s3box_lite.build.event_core=-DARDUINO_EVENT_RUNNING_CORE=1
+
+esp32s3box_lite.menu.USBMode.hwcdc=Hardware CDC and JTAG
+esp32s3box_lite.menu.USBMode.hwcdc.build.usb_mode=1
+esp32s3box_lite.menu.USBMode.hwcdc.upload.use_1200bps_touch=false
+esp32s3box_lite.menu.USBMode.hwcdc.upload.wait_for_upload_port=false
+esp32s3box_lite.menu.USBMode.default=USB-OTG
+esp32s3box_lite.menu.USBMode.default.build.usb_mode=0
+esp32s3box_lite.menu.USBMode.default.upload.use_1200bps_touch=true
+esp32s3box_lite.menu.USBMode.default.upload.wait_for_upload_port=true
+
+esp32s3box_lite.menu.MSCOnBoot.default=Disabled
+esp32s3box_lite.menu.MSCOnBoot.default.build.msc_on_boot=0
+esp32s3box_lite.menu.MSCOnBoot.msc=Enabled (Requires USB-OTG Mode)
+esp32s3box_lite.menu.MSCOnBoot.msc.build.msc_on_boot=1
+
+esp32s3box_lite.menu.DFUOnBoot.default=Disabled
+esp32s3box_lite.menu.DFUOnBoot.default.build.dfu_on_boot=0
+esp32s3box_lite.menu.DFUOnBoot.dfu=Enabled (Requires USB-OTG Mode)
+esp32s3box_lite.menu.DFUOnBoot.dfu.build.dfu_on_boot=1
+
+esp32s3box_lite.menu.PartitionScheme.app3M_fat9M_16MB=16M Flash (3MB APP/9.9MB FATFS)
+esp32s3box_lite.menu.PartitionScheme.app3M_fat9M_16MB.build.partitions=app3M_fat9M_16MB
+esp32s3box_lite.menu.PartitionScheme.app3M_fat9M_16MB.upload.maximum_size=3145728
+esp32s3box_lite.menu.PartitionScheme.rainmaker=RainMaker
+esp32s3box_lite.menu.PartitionScheme.rainmaker.build.partitions=rainmaker
+esp32s3box_lite.menu.PartitionScheme.rainmaker.upload.maximum_size=3145728
+esp32s3box_lite.menu.PartitionScheme.esp_sr_16=ESP SR 16M (3MB APP/7MB SPIFFS/2.9MB MODEL)
+esp32s3box_lite.menu.PartitionScheme.esp_sr_16.upload.maximum_size=3145728
+esp32s3box_lite.menu.PartitionScheme.esp_sr_16.upload.extra_flags=0xD10000 {build.path}/srmodels.bin
+esp32s3box_lite.menu.PartitionScheme.esp_sr_16.build.partitions=esp_sr_16
+esp32s3box_lite.menu.PartitionScheme.custom=Custom
+esp32s3box_lite.menu.PartitionScheme.custom.build.partitions=
+esp32s3box_lite.menu.PartitionScheme.custom.upload.maximum_size=16777216
+
+esp32s3box_lite.menu.DebugLevel.none=None
+esp32s3box_lite.menu.DebugLevel.none.build.code_debug=0
+esp32s3box_lite.menu.DebugLevel.error=Error
+esp32s3box_lite.menu.DebugLevel.error.build.code_debug=1
+esp32s3box_lite.menu.DebugLevel.warn=Warn
+esp32s3box_lite.menu.DebugLevel.warn.build.code_debug=2
+esp32s3box_lite.menu.DebugLevel.info=Info
+esp32s3box_lite.menu.DebugLevel.info.build.code_debug=3
+esp32s3box_lite.menu.DebugLevel.debug=Debug
+esp32s3box_lite.menu.DebugLevel.debug.build.code_debug=4
+esp32s3box_lite.menu.DebugLevel.verbose=Verbose
+esp32s3box_lite.menu.DebugLevel.verbose.build.code_debug=5
+
+esp32s3box_lite.menu.EraseFlash.none=Disabled
+esp32s3box_lite.menu.EraseFlash.none.upload.erase_cmd=
+esp32s3box_lite.menu.EraseFlash.all=Enabled
+esp32s3box_lite.menu.EraseFlash.all.upload.erase_cmd=-e
+
+##############################################################
+
 esp32s3usbotg.name=ESP32-S3-USB-OTG
 esp32s3usbotg.vid.0=0x303a
 esp32s3usbotg.pid.0=0x1001
